@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Decision Tree</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <video id="background-video" class="background-video" autoplay loop muted>
+        <source src="road.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+   
+  <video id="beach-video" class="background-video" loop muted>
+    <source src="beach.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video id="mountain-video" class="background-video" loop muted>
+    <source src="mountain.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="container">
+    <header>
+      <h1>Interactive Decision Tree</h1>
+    </header>
+
+    <form id="decision-tree-form" class="form-container">
+      <label for="preference">Do you prefer the mountains or the beach?</label>
+      <select id="preference" name="preference">
+        <option value="" disabled selected>Select an option</option>
+        <option value="Mountains">Mountains</option>
+        <option value="Beach">Beach</option>
+      </select>
+
+      <label for="activity">Are you looking for adventure or relaxation?</label>
+      <select id="activity" name="activity">
+        <option value="" disabled selected>Select an option</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Relaxation">Relaxation</option>
+      </select>
+
+      <label for="budget">What's your budget?</label>
+      <select id="budget" name="budget">
+        <option value="" disabled selected>Select an option</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <button type="submit" >Generate Recommendation</button>
+      <button type="reset" id="resetbutton" target='_blank' href="https://www.makemytrip.com">Visit Make My trip</button>
+    </form>
+
+    <div id="recommendation-output" class="output">
+      <p>Your recommendation will appear here...</p>
+    </div>
+
+    <div class="icons">
+      <div class="icon-circle" data-tooltip="Relaxation">🛌</div>
+      <div class="icon-circle" data-tooltip="Adventure">⛰️</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
